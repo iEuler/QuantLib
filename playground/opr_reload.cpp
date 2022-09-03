@@ -21,18 +21,19 @@ std::ostream& operator<<(std::ostream& out, const std::vector<double>& vec) {
 }
 
 namespace my {
-    class myC2 {
-    public:
-        friend std::ostream& operator<<(std::ostream& out, const std::vector<int>& vec);    
-    };
 
-    std::ostream& operator<<(std::ostream& out, const std::vector<int>& vec) {
-        out << "int type in my namespace: \n";
-        for (int i=0; i<vec.size(); ++i) out << vec[i] << ", ";
-        out << "\n";
+class myC2 {
+public:
+    friend std::ostream& operator<<(std::ostream& out, const std::vector<int>& vec);    
+};
+
+std::ostream& operator<<(std::ostream& out, const std::vector<int>& vec) {
+    out << "int type in my namespace: \n";
+    for (int i=0; i<vec.size(); ++i) out << vec[i] << ", ";
+    out << "\n";
 }
 
-}
+};
 
 
 int main() {
@@ -42,7 +43,7 @@ int main() {
     std::cout<<s;
     std::vector<double> v2{5.5,6.2,7.1,3.8,4.6,2.7};
     std::cout<<v2;
-    my::std::cout<<v;
+    std::cout<<v;
     
 
 }

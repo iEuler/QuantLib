@@ -3,6 +3,10 @@
 #include <iterator>
 #include <algorithm>
 
+#include <ql/quantlib.hpp>
+
+// #include "ql/config.ansi.hpp"
+
 int main()
 {
     typedef std::istream_iterator<int> in;

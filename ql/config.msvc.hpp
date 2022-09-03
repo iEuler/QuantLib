@@ -75,3 +75,5 @@
 #endif
 
 #endif
+
+#pragma warning(disable: 4819)

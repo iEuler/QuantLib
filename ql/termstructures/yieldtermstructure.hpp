@@ -129,7 +129,7 @@ namespace QuantLib {
                                  const Date& d2,
                                  const DayCounter& resultDayCounter,
                                  Compounding comp,
-                                 Frequency freq = Annual,
+                                 Frequency freq = Annual, 
                                  bool extrapolate = false) const;
         /*! The resulting interest rate has the required day-counting
             rule.
