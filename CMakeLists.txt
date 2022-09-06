@@ -28,6 +28,9 @@ project(${PACKAGE_NAME} LANGUAGES CXX DESCRIPTION "The QuantLib C++ Library")
 
 # Path for package-local cmake modules
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
+SET(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "D:/boost_1_75_0")
+SET(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "D:/boost_1_75_0/libs")
+message( "CMAKE_MODULE_PATH  = " ${CMAKE_MODULE_PATH})
 
 # Installation directories
 set(QL_INSTALL_BINDIR "bin" CACHE STRING "Installation directory for executables")
@@ -133,6 +136,9 @@ if (NOT DEFINED QL_BOOST_COMPONENTS)
     endif()
 endif()
 
+message( "BOOST_ROOT  = " ${BOOST_ROOT})
+message( "QL_BOOST_VERSION  = " ${QL_BOOST_VERSION})
+message( "QL_BOOST_COMPONENTS  = " ${QL_BOOST_COMPONENTS})
 find_package(Boost ${QL_BOOST_VERSION} REQUIRED COMPONENTS ${QL_BOOST_COMPONENTS})
 
 # Do not warn about Boost versions higher than 1.58.0

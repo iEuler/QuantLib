@@ -653,6 +653,7 @@ int main(int argc, char *argv[]) {
             example03();
         }
 
+        std::cout << "End of testing for CDS. \n";
         return 0;
     }
     catch (exception &e) {

@@ -62,6 +62,8 @@
 #pragma warning(disable : 26812)
 
 
+#pragma warning(disable : 4819)
+
 #ifndef _CPPRTTI
 #   error Enable Run-Time Type Info (Property Pages | C/C++ | Language)
 #endif
